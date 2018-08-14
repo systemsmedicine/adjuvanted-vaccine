@@ -19,7 +19,6 @@ This simple model is able to capture the essential feature observed in the data,
 
 ## Repository structure
 
-- `docs` contains the paper, where all details and assumptions of the model can be found.
 - `code` contains all the files needed to reproduce the results from the paper for the different variants of the model. See the `README.md` file inside this folder for further details.
 - `params` contains the best fit parameters obtained by the estimation procedure.
 - `figures` contains the outputs from the model with the best fit parameters.
