@@ -52,28 +52,13 @@ AS03 = np.array(AS03)
 Diluvac = np.array(Diluvac)
 X_data = np.array(X_data)
 
-# Boundary values for the parameters to be estimated in the base case
-#                gammaNA     gammaHA        mu         dmax
-bounds_PBS = [(1.0, 2.5), (1.0, 7.5), (0.2, 1.0), (0.1, 0.3)]
-
 # Boundary values for the parameters to be estimated in the adjuvanted case
 #                betaNA       betaHA       betaAb
 bounds_adj = [(1.0, 100.0), (1.0, 100.0), (1.0, 1.0)]
 
-# We pack the base arguments for the estimation procedure
-args_PBS = (X_data, PBS)
-
-# We estimate and print the best parameters for the base case
-# These values will be fixed in the adjuvanted case
-estimation_PBS = differential_evolution(costfn, bounds_PBS, args=args_PBS)
-gammaNA, gammaHA, mu, dmax = estimation_PBS.x
-
-print """Best parameters for base case:
-gammaNA: {}
-gammaHA: {}
-mu: {}
-dmax: {}
-""".format(gammaNA, gammaHA, mu, dmax)
+# We use the base parameters of model A
+params_base = pd.Series.from_csv('../../params/best_fit_params_base_A.csv')
+gammaNA, gammaHA, mu, dmax = params_base['gammaNA'], params_base['gammaHA'], params_base['mu'], params_base['dmax']
 
 # Base affinities and pool of naive B cells for given dmax
 baseQ = vQ0(np.abs(grid), dmax) + vQ0(np.abs(1 - grid), dmax)
@@ -90,7 +75,6 @@ betaAb_list = []
 args_MF59 = (X_data, MF59, base_params)
 args_AS03 = (X_data, AS03, base_params)
 args_Diluvac = (X_data, Diluvac, base_params)
-
 
 # We estimate and print the best parameters for each adjuvant
 # MF59
@@ -138,12 +122,6 @@ betaAb: {}
 betaNA_list.append(betaNA_0)
 betaHA_list.append(betaHA_0)
 betaAb_list.append(betaAb_0)
-
-# We export the values of the best parameters
-best_fit_params_base = {'gammaNA': gammaNA, 'gammaHA': gammaHA, 'mu': mu,
-                   'dmax': dmax}
-best_fit_params_base = pd.Series(best_fit_params_base)
-best_fit_params_base.to_csv('../../params/best_fit_params_base_Astar.csv')
 
 best_fit_params_adj = {'adjuvant': adjuvants,
                        'betaNA': betaNA_list, 'betaHA': betaHA_list,
