@@ -12,9 +12,11 @@ For each of the variants:
         $ python parameter_estimation.py
     ```
 
-    It outputs the best fit parameters to the `params` folder in the parent directory. Two files are generated: `best_fit_params_base_(model_variant).csv` for the non-adjuvanted vaccine, and `best_fit_params_adj_(model_variant).csv` for the adjuvanted formulations. Note that model `A*` uses the same base parameters as model `A`. 
+    It outputs the best fit parameters to the `params` folder in the parent directory. Two files are generated: `best_fit_params_base_(model_variant).csv` for the non-adjuvanted vaccine, and `best_fit_params_adj_(model_variant).csv` for the adjuvanted formulations. Note that model A* uses the same base parameters as model A. 
 
 - `results.ipynb` is a Jupyter notebook that can be used to interactively explore the output of the main program for the best parameter values. In particular, reproduce all model plots from the paper.
+
+**Note:** The bootstrap code for model A is also supplied for completeness.
 
 ---
 
