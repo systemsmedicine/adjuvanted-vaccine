@@ -54,7 +54,7 @@ X_data = np.array(X_data)
 
 # Boundary values for the parameters to be estimated in the base case
 #                gammaNA     gammaHA        mu         dmax
-bounds_PBS = [(1.0, 2.5), (1.0, 7.5), (0.2, 1.0), (0.1, 0.3)]
+bounds_PBS = [(0.1, 2.5), (0.1, 7.5), (0.2, 1.0), (0.1, 0.3)]
 
 # Boundary values for the parameters to be estimated in the adjuvanted case
 #                betaNA       betaHA       betaAb
