@@ -1,6 +1,6 @@
 ## Contents
 
-There are 4 subdirectories, corresponding to the 4 variants of the model (see paper for details).
+There are 3 subdirectories, corresponding to the 3 spatial variants of the model (see paper for details).
 
 For each of the variants:
 
