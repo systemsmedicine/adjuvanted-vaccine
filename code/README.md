@@ -1,6 +1,6 @@
 ## Contents
 
-There are 3 subdirectories, corresponding to the 3 variants of the model (see paper for details).
+There are 4 subdirectories, corresponding to the 4 variants of the model (see paper for details).
 
 For each of the variants:
 
@@ -12,9 +12,9 @@ For each of the variants:
         $ python parameter_estimation.py
     ```
 
-    It outputs the best fit parameters to the `params` folder in the parent directory. Two files are generated: `best_fit_params_base_(model_variant).csv` for the non-adjuvanted vaccine, and `best_fit_params_adj_(model_variant).csv` for the adjuvanted formulations.
+    It outputs the best fit parameters to the `params` folder in the parent directory. Two files are generated: `best_fit_params_base_(model_variant).csv` for the non-adjuvanted vaccine, and `best_fit_params_adj_(model_variant).csv` for the adjuvanted formulations. Note that model `A*` uses the same base parameters as model `A`. 
 
-- `results.ipynb` is a Jupyter notebook that can be used to interactively explore the output of the main program for the best parameter values. In particular, reproduce all plots from the paper. For more details, see [here](https://jupyter.org/).
+- `results.ipynb` is a Jupyter notebook that can be used to interactively explore the output of the main program for the best parameter values. In particular, reproduce all model plots from the paper.
 
 ---
 
@@ -22,9 +22,9 @@ For each of the variants:
 
 Packages needed for the main program:
 
-- `numpy` (version `1.12.1` used)
+- `numpy` (version `1.15.0` used)
 
-- `scipy` (version `0.19.0` used)
+- `scipy` (version `1.1.0` used)
 
 - `pandas` (version `0.20.1` used)
 
@@ -36,4 +36,4 @@ Additional requirements for interactive exploration and figure generation:
 
 - LaTeX (for plot labels).
 
-**Note:** All these are written in Python 2.7.
+**Note:** All these were written in Python 2.7, but should work in Python 3.x with either minor or no modifications.
