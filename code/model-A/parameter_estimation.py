@@ -148,8 +148,7 @@ best_fit_params_base.to_csv('../../params/best_fit_params_base_A.csv')
 best_fit_params_adj = {'adjuvant': adjuvants,
                        'betaNA': betaNA_list, 'betaHA': betaHA_list,
                        'betaAb': betaAb_list}
-#best_fit_params_adj = {'adjuvant': adjuvants,
-#                       'betaNA': betaNA_list, 'betaHA': betaHA_list}
+
 best_fit_params_adj = pd.DataFrame(best_fit_params_adj)
 best_fit_params_adj.set_index(best_fit_params_adj['adjuvant'])
 best_fit_params_adj.to_csv('../../params/best_fit_params_adj_A.csv')
