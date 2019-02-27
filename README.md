@@ -1,6 +1,6 @@
 # Mathematical model of adjuvanted vaccine dynamics
 
-This repository contains different variants of a mathematical model of antibody production dynamics in response to influenza vaccination with adjuvanted and non-adjuvanted vaccine formulations. This code accompanies the paper 'Adjuvanted influenza vaccine dynamics', by C. Parra-Rojas, V. von Messling, and E. A. Hernández-Vargas.
+This repository contains different variants of a mathematical model of antibody production dynamics in response to influenza vaccination with adjuvanted and non-adjuvanted vaccine formulations. This code accompanies the paper [Adjuvanted influenza vaccine dynamics](https://www.nature.com/articles/s41598-018-36426-9), by C. Parra-Rojas, V. von Messling, and E. A. Hernández-Vargas.
 
 Vaccination data correspond to [Schmidt *et al.*, Vaccine **34(44)**, 5329 (2016)](http://www.sciencedirect.com/science/article/pii/S0264410X16307897).
 
